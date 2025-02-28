@@ -1,0 +1,73 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+   }
+   body {
+    background-color: #f4f7f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+   }
+   .container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+   }
+   h1 {
+    color: #333;
+    margin-bottom: 10px;
+   }
+   .date-time {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+   }
+   table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+   }
+   table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+   }
+   table th {
+    background-color: #007BFF;
+    color: #fff;
+   }
+   table tr:nth-child(even) {
+    background-color: #f9f9f9;
+   }
+   button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+   }
+   button:hover {
+    opacity: 0.9;
+   }
+   button:nth-child(1) {
+    background-color: #28a745; /* Green for Clock In */
+   }
+   button:nth-child(2) {
+    background-color: #dc3545; /* Red for Clock Out */
+   }
+   @media (max-width: 600px) {
+    table, th, td {
+    font-size: 0.9rem;
+    }
+    h1 {
+    font-size: 1.5rem;
+    }
+   }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Company Attendance Management</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="container">
+ <h1>Company Attendance Management</h1>
+ <div class="date-time" id="dateTime"></div>
+ <table>
+ <thead>
+ <tr>
+ <th>Employee ID</th>
+ <th>Name</th>
+ <th>Status</th>
+ <th>Clock In</th>
+ <th>Clock Out</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>#101</td>
+ <td>Abhinaya</td>
+ <td id="status-101">Not Clocked In</td>
+ <td><button onclick="clockIn(101)">Clock In</button></td>
+ <td><button onclick="clockOut(101)">Clock Out</button></td>
+ </tr>
+ <tr>
+ <td>#102</td>
+ <td>Pooja</td>
+ <td id="status-102">Not Clocked In</td>
+ <td><button onclick="clockIn(102)">Clock In</button></td>
+ <td><button onclick="clockOut(102)">Clock Out</button></td>
+ </tr>
+ <tr>
+ <td>#103</td>
+ <td>Rasagna</td>
+ <td id="status-103">Not Clocked In</td>
+ <td><button onclick="clockIn(103)">Clock In</button></td>
+ <td><button onclick="clockOut(103)">Clock Out</button></td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ <script>
+ // Display Current Date and Time
+ function updateDateTime() {
+ const now = new Date();
+ document.getElementById('dateTime').innerText = now.toLocaleString();
+ }
+ setInterval(updateDateTime, 1000);
+ // Clock In Function
+ function clockIn(id) {
+ const status = document.getElementById(`status-${id}`);
+ status.innerText = `Clocked In at ${new Date().toLocaleTimeString()}`;
+ status.style.color = "green";
+ }
+ // Clock Out Function
+ function clockOut(id) {
+ const status = document.getElementById(`status-${id}`);
+ status.innerText = `Clocked Out at ${new Date().toLocaleTimeString()}`;
+ status.style.color = "red";
+ }
+ // Initialize Date & Time
+ updateDateTime();
+ </script>
+</body>
+</html>
